@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    color: #363636;
+    background-color: #363636;
+}
+
+.container {
+    padding-top: 200px;
+}
+
+.app {
+    margin: 0 auto;
+    width: 700px;
+    padding: 30px 0 40px 0;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+#input {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*
+    List of Items
+*/
+ul {
+    padding: 2rem 5rem 0 5rem;
+}
+
+ul .item {
+    list-style: none;
+    font-size: 20px;
+    position: relative;
+    background-color: #363636;
+    color: white;
+    padding: .75rem;
+    margin: .25rem 0;
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 2px;
+}
+
+ul .item i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    height: 100%;
+}
+
+ul .item i:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
