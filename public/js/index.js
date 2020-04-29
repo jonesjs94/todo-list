@@ -2,7 +2,9 @@ eventListeners();
 
 recoverItems();
 
-
+/**
+ * Events 
+ */
 function eventListeners() {
     const formulario = document.querySelector("form");
     formulario.addEventListener("submit", addItem);
@@ -43,6 +45,10 @@ function addItem(e) {
     e.preventDefault();
     const item = document.getElementById("input").value;
 
+    if(!item) { // Stop function if input has no value
+        return false;
+    }
+    
     createItem(item); // Create Element
 
     saveItem(item); // Save text in localStorage
@@ -80,6 +86,10 @@ function saveItem(item) {
 }
 
 
+/**
+ * Delete item text from localStorage
+ * @param {string} item 
+ */
 function deleteItem(item) {
     let array = [],
     items = localStorage.getItem("items");
@@ -90,6 +100,9 @@ function deleteItem(item) {
 }
 
 
+/**
+ * Re-enter items in list when reload
+ */
 function recoverItems() {
     let array = [],
         items = localStorage.getItem("items");
